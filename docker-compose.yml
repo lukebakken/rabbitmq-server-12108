@@ -1,0 +1,26 @@
+networks:
+  rabbitnet:
+    name: rabbitnet
+    driver: bridge
+
+services:
+  rmq3-10:
+    build: ./rmq/3.10
+    hostname: rmq-310
+    networks:
+      - rabbitnet
+    environment:
+      - LOG=debug
+    ports:
+      # HOST:CONTAINER
+      - 15672:15672
+  rmq3-12:
+    build: ./rmq/3.12
+    hostname: rmq-312
+    networks:
+      - rabbitnet
+    environment:
+      - LOG=debug
+    ports:
+      # HOST:CONTAINER
+      - 15673:15672

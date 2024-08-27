@@ -1,0 +1,86 @@
+{
+    "rabbit_version": "3.10.25",
+    "rabbitmq_version": "3.10.25",
+    "product_name": "RabbitMQ",
+    "product_version": "3.10.25",
+    "users": [
+        {
+            "name": "guest",
+            "password_hash": "jo87KRQRIDZO/WUaTzR7zBYADT2FC5mHLcPL31mQuFjZwUGX",
+            "hashing_algorithm": "rabbit_password_hashing_sha256",
+            "tags": [
+                "administrator"
+            ],
+            "limits": {}
+        },
+        {
+            "name": "rabbitmq-server-12108",
+            "password_hash": "E0SCughD16pSjSa2MCLisEUIGRF3us20vjE52BjdFStC5zK9",
+            "hashing_algorithm": "rabbit_password_hashing_sha256",
+            "tags": [
+                "administrator"
+            ],
+            "limits": {}
+        }
+    ],
+    "vhosts": [
+        {
+            "name": "/"
+        },
+        {
+            "name": "rabbitmq-server-12108"
+        }
+    ],
+    "permissions": [
+        {
+            "user": "rabbitmq-server-12108",
+            "vhost": "rabbitmq-server-12108",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        },
+        {
+            "user": "guest",
+            "vhost": "rabbitmq-server-12108",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        },
+        {
+            "user": "guest",
+            "vhost": "/",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        },
+        {
+            "user": "rabbitmq-server-12108",
+            "vhost": "/",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        }
+    ],
+    "topic_permissions": [],
+    "parameters": [],
+    "global_parameters": [
+        {
+            "name": "internal_cluster_id",
+            "value": "rabbitmq-cluster-id-fW1AIj5py4DZvI-2S42HEQ"
+        }
+    ],
+    "policies": [],
+    "queues": [
+        {
+            "name": "rabbitmq-server-12108",
+            "vhost": "rabbitmq-server-12108",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {
+                "x-queue-type": "classic"
+            }
+        }
+    ],
+    "exchanges": [],
+    "bindings": []
+}
