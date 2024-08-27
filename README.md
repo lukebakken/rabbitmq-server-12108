@@ -16,8 +16,8 @@ docker compose up
 
 The above will do the following:
 
-* Start a RabbitMQ 3.10 node, and import definitions, including a vhost, user, and shovel.
-* Start a RabbitMQ 3.12 node, creating the same vhost and user, but no shovel
+* Start a RabbitMQ 3.10 node, and import definitions, including a vhost, user, queue, and shovel.
+* Start a RabbitMQ 3.12 node, creating the same vhost, user and queue, but no shovel.
 
 In the Management UI (http://localhost:15672), go to "Shovel Status" and it
 will be running.
